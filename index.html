@@ -2,18 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Awesome Windows App</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Welcome to the Prop 64 Eligibility Analyzer 5000</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div id="screen-1">
+      <p>Please click "Begin" to test that we can handle button clicks and open new screens.</p>
+      <button id="begin">Begin</button>
+    </div>
+
+    <div id="screen-2" hidden>
+      <label for="county">Please select your county</label>
+      <select id="county">
+        <option value="">--Please select--</option>
+        <option value="alameda">Alameda</option>
+        <option value="contra_costa">Contra Costa</option>
+        <option value="san_francisco">San Francisco</option>
+      </select>
+    </div>
+
+    <div id="screen-3" hidden>
+      <p>You have selected <span id="selected-county"></span> county</p>
+    </div>
+
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+      require('./navigation.js')
     </script>
   </body>
 </html>
