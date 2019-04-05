@@ -1,20 +1,20 @@
 {
-  "name": "electron-quick-start",
+  "name": "cmr-electron-demo",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A sandbox Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/codeforamerica/cmr-electron-demo",
   "keywords": [
     "Electron",
     "quick",
     "start",
-    "tutorial",
+    "sandbox",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Code for America",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^4.1.3"
