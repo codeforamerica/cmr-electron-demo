@@ -1,2 +1,6 @@
 node_modules
+cmr-electron-demo-darwin-x64
+cmr-electron-demo-win32-x64
+
 .idea/
+.DS_Store
