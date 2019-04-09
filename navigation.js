@@ -8,11 +8,6 @@ function showScreen3 () {
     document.getElementById("screen-3").hidden = false
 }
 
-function showScreen4 () {
-    document.getElementById("screen-3").hidden = true
-    document.getElementById("screen-4").hidden = false
-}
-
 function confirmSelectedCounty (countyName) {
     document.getElementById("county-confirmation").getElementsByClassName("selected-county")[0].innerText = countyName
 }
@@ -31,16 +26,12 @@ function handleFileSelection (e) {
     populateSuccessMessage(filePath, selectedCountyCode)
 }
 
-document.getElementById("begin").onclick = function () {
-    showScreen2()
-}
-
 document.getElementById("county").onchange = function (e) {
     confirmSelectedCounty(e.target.selectedOptions[0].text)
-    showScreen3()
+    showScreen2()
 }
 
 document.getElementById("doj-file-form").onsubmit = function (e) {
     handleFileSelection(e)
-    showScreen4()
+    showScreen3()
 }

@@ -6,13 +6,7 @@
   </head>
   <body>
     <h1>Welcome to the Prop 64 Eligibility Analyzer 5000</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
     <div id="screen-1">
-      <p>Please click "Begin" to test that we can handle button clicks and open new screens.</p>
-      <button id="begin">Begin</button>
-    </div>
-
-    <div id="screen-2" hidden>
       <p>Please select your county</p>
       <select id="county">
         <option value="">--Please select--</option>
@@ -22,7 +16,7 @@
       </select>
     </div>
 
-    <div id="screen-3" hidden>
+    <div id="screen-2" hidden>
       <p id="county-confirmation">You have selected <span class="selected-county"></span> county</p>
 
       <p>Please select your DOJ file</p>
@@ -36,7 +30,7 @@
       </form>
     </div>
 
-    <div id="screen-4" hidden>
+    <div id="screen-3" hidden>
       <p id="success-message">Analysis of file at <span class="file-path"></span> for county code <span class="selected-county"></span> is complete!</p>
     </div>
 
