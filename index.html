@@ -13,7 +13,7 @@
     </div>
 
     <div id="screen-2" hidden>
-      <label for="county">Please select your county</label>
+      <p>Please select your county</p>
       <select id="county">
         <option value="">--Please select--</option>
         <option value="alameda">Alameda</option>
@@ -23,7 +23,21 @@
     </div>
 
     <div id="screen-3" hidden>
-      <p>You have selected <span id="selected-county"></span> county</p>
+      <p id="county-confirmation">You have selected <span class="selected-county"></span> county</p>
+
+      <p>Please select your DOJ file</p>
+
+      <form id="doj-file-form">
+        <input type="file"
+               id="doj-file" name="doj-file"
+               accept="text/csv">
+
+        <input type="submit" id="analyze-doj-file" value="Analyze File">
+      </form>
+    </div>
+
+    <div id="screen-4" hidden>
+      <p id="success-message">Analysis of file at <span class="file-path"></span> for county code <span class="selected-county"></span> is complete!</p>
     </div>
 
 
