@@ -1,3 +1,5 @@
+const spawn = require('child_process').spawn;
+
 function showScreen2 () {
     document.getElementById("screen-1").hidden = true
     document.getElementById("screen-2").hidden = false
@@ -23,7 +25,24 @@ function handleFileSelection (e) {
     let filePath = document.getElementById("doj-file").files[0].path
     let selectedCountyCode = document.getElementById("county").value
 
+    console.log(selectedCountyCode)
+
     populateSuccessMessage(filePath, selectedCountyCode)
+    console.log(process.resourcesPath +'/gogen')
+    let goProcess = spawn(process.resourcesPath +'/gogen',['--input-doj='+filePath, '--outputs="~/Downloads"', '--county="'+selectedCountyCode+'"'])
+
+    goProcess.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+    });
+
+    goProcess.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+    });
+
+    goProcess.on('close', (code) => {
+        console.log(`child process exited with code ${code}`);
+    });
+
 }
 
 document.getElementById("county").onchange = function (e) {
